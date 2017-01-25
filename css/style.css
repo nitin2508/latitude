@@ -1,0 +1,13 @@
+#register-form {
+    max-width:600px !important;
+    margin-top:20px;
+}
+.event-heading{
+    text-align: center;
+}
+
+
+#pie {
+    height: 500px;
+    width: 500px;
+}

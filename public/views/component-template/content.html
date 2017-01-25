@@ -1,0 +1,79 @@
+<div id="register-form" class="ui container grid">
+    <!-- <div class="four wide column">
+
+    </div> -->
+    <button ng-click="$ctrl.goState()" class="ui button submit " type="submit">Get all Info</button>
+    <button ng-click="$ctrl.chart()" class="ui button submit " type="submit">Get chart</button>
+
+
+
+    <div class="ui existing segment sixteen wide column">
+        <h3 class="event-heading">Event Registration</h3>
+        <form name="registrationForm" novalidate class="ui form">
+
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" required ng-model="$ctrl.registrationDetail.name" minlength='3' name="name" placeholder="First Name">
+                <span style="color:red" ng-if="(registrationForm.name.$error.minlength ||
+                    registrationForm.name.$error.required) && registrationForm.name.$touched">
+                    Please Enter Name and it would be greater then 2 words</span>
+            </div>
+
+            <div class="field">
+                <label>E-Mail</label>
+                <input type="email" required ng-model="$ctrl.registrationDetail.email" name="email" placeholder="First Name">
+                <span style="color:red" ng-if="(registrationForm.email.$invalid) && registrationForm.email.$touched">
+                    Please Enter email and it will be in form abc@xyz.com</span>
+            </div>
+            <div class="field">
+                <label>Upload Image</label>
+                <input type="file" required ngf-select="$ctrl.uploadFile()" ng-model="$ctrl.picFile" name="file"
+                accept="image/*" ngf-max-size="2MB" required
+                ngf-model-invalid="errorFile">
+                 <img style="height:40px;width:40px" ng-if="$ctrl.picFile" ngf-thumbnail="$ctrl.picFile" class="thumb">
+                 <i ng-show="registrationForm.file.$error.required">*required</i><br>
+   <i ng-show="registrationForm.file.$error.maxSize">File too large
+       {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+
+            </div>
+
+            <div class="field">
+                <label>Mobile Number</label>
+                <input type="text" name="phone" required ng-model="$ctrl.registrationDetail.phone" maxlength="10" minlength="10" placeholder="Mobile number">
+                <span style="color:red" ng-if="registrationForm.phone.$invalid && registrationForm.phone.$touched">
+                    Phone number must be of 10 digit.
+                </span>
+            </div>
+
+
+            <div class="two fields">
+                <div class="field">
+                    <label>Registration Type</label>
+                    <select ng-model="$ctrl.registrationDetail.registrationType" required class="ui fluid search dropdown" name="type">
+                       <option value="">Select Registration Type</option>
+                      <option value="self">Self</option>
+                      <option value="corporate">Corporate</option>
+                      <option value="group">Group</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <span style="color:red" ng-if="registrationForm.type.$invalid && registrationForm.type.$touched">
+                        Registration Type is necessary.
+                    </span>
+                </div>
+                <div class="field">
+                    <label>Number of tickets</label>
+                    <input type="number" required ng-model="$ctrl.registrationDetail.numberOfTickets" name="ticket" step=1 min=1 max=15 placeholder="Select no of ticket" value="1">
+                    <span style="color:red" ng-if="registrationForm.ticket.$invalid && registrationForm.ticket.$touched">
+                        Number of ticket is necessary.
+                    </span>
+                </div>
+            </div>
+
+            <button ng-disabled="registrationForm.$invalid" ng-click="$ctrl.submitUserDetail()" class="ui button submit " type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- <div class="four wide column">
+
+    </div> -->
+</div>

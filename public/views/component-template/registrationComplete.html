@@ -1,0 +1,39 @@
+<div id="register-form" class="ui container grid">
+
+    <div class="ui existing segment sixteen wide column ui ignored positive message">
+        <div><h1 style="text-align:center">Registration Sucessful</h1></div>
+        <table class="ui celled table">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>{{$ctrl.user._id}}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{$ctrl.user.name}}</td>
+                </tr>
+                <tr>
+                    <td>E-Mail</td>
+                    <td>{{$ctrl.user.email}}</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>{{$ctrl.user.phone}}</td>
+                </tr>
+                <tr>
+                    <td>Registration Type</td>
+                    <td>{{$ctrl.user.registrationType}}</td>
+                </tr>
+                <tr>
+                    <td>Number Of tickets</td>
+                    <td>{{$ctrl.user.numberOfTickets}}</td>
+                </tr>
+                <tr>
+                    <td>Id Name</td>
+                    <td>{{$ctrl.user.image.originalname}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="ui container grid">
+
+    <div class="ui existing segment sixteen wide column ">
+        <div>
+            <h1 style="text-align:center">Registration Info</h1></div>
+        <table class="ui fixed single line celled table">
+            <thead>
+                <tr>
+                    <th>Registration No.</th>
+                    <th>Full Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Number Of ticket</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in $ctrl.users">
+                    <td>{{user._id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.registrationType}}</td>
+                    <td>{{user.numberOfTickets}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
