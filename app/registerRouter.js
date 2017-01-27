@@ -6,10 +6,8 @@ var registerRouter= express.Router();
 registerRouter.use(bodyParser.json());
 registerRouter.route('/')
     .post(function(req, res, next) {
-        console.log(req.body);
             userRegistration.create(req.body, function(err,user) {
                     if (err) {throw err;}
-                    console.log('event created');
                     var id = user._id;
                     // res.writeHead(200, {
                     //     'Content-Type': 'json'

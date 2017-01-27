@@ -13,7 +13,7 @@
 
         this.$onInit = function(){
             this.myChartObject = {};
-            this.myChartObject.type = "PieChart";
+            this.myChartObject.type = 'PieChart';
             var stats =this.stats;
             var row = [];
             for(var i=0;i<stats.length;i++){
@@ -23,13 +23,13 @@
                 ]};
                 row.push(angular.copy(obj));
             }
-            console.log(row);
-            this.myChartObject.data = {"cols": [
-                {id: "t", label: "ping", type: "string"},
-                {id: "a", label: "ices", type: "number"}
+            this.myChartObject.data = {'cols': [
+                {id: 't', label: 'ping', type: 'string'},
+                {id: 'a', label: 'ices', type: 'number'}
             ],rows:row
 
-        }
+        };
 
-    }}
+    };
+}
 })();

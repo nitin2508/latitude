@@ -2,8 +2,8 @@
     <!-- <div class="four wide column">
 
     </div> -->
-    <button ng-click="$ctrl.goState()" class="ui button submit " type="submit">Get all Info</button>
-    <button ng-click="$ctrl.chart()" class="ui button submit " type="submit">Get chart</button>
+    <!-- <button ng-click="$ctrl.goState()" class="ui button submit " type="submit">Get all Info</button>
+    <button ng-click="$ctrl.chart()" class="ui button submit " type="submit">Get chart</button> -->
 
 
 
@@ -31,7 +31,7 @@
                 accept="image/*" ngf-max-size="2MB" required
                 ngf-model-invalid="errorFile">
                  <img style="height:40px;width:40px" ng-if="$ctrl.picFile" ngf-thumbnail="$ctrl.picFile" class="thumb">
-                 <i ng-show="registrationForm.file.$error.required">*required</i><br>
+                 <i style="color:red" ng-show="registrationForm.file.$error.required && registrationForm.file.$touched">*required</i><br>
    <i ng-show="registrationForm.file.$error.maxSize">File too large
        {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
 

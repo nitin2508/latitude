@@ -16,8 +16,7 @@ imageUploadRouter.route('/')
     });
 imageUploadRouter.route('/:path')
     .get(function(req, res, next) {
-        res.setHeader('Content-disposition', 'attachment; filename=nitin.jpg');
-        res.setHeader('Content-type', 'image/png');
+
         res.sendfile('./uploads/' + req.params.path);
     });
 

@@ -1,0 +1,28 @@
+<div id="register-form" class="ui container grid">
+    <!-- <div class="four wide column">
+
+    </div> -->
+
+
+    <div class="ui existing segment sixteen wide column">
+        <h3 class="event-heading">Event Registration</h3>
+        <form name="registrationForm" novalidate class="ui form">
+
+            <div class="field">
+                <label>Username</label>
+                <input type="text"  ng-model="$ctrl.username" name="name" placeholder="User Name">
+            </div>
+            <div class="field">
+                <label>Password</label>{{$ctrl.loginObj.password}}
+                <input type="text"  ng-model="$ctrl.password"  name="name" placeholder="Password">
+            </div>
+
+
+            <button  ng-click="$ctrl.login()" class="ui button submit " type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- <div class="four wide column">
+
+    </div> -->
+</div>

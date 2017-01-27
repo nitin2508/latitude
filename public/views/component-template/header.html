@@ -2,9 +2,14 @@
     <div class="header item">
         Our Company
     </div>
-    <div class="right item">
+    <div ng-hide="$ctrl.type ==='logout'"  class="right item">
         <div class="ui action input">
-            <div class="ui button">Admin Log-in</div>
+            <div class="ui button" ng-click="$ctrl.login()">Admin Log-in</div>
+        </div>
+    </div>
+    <div ng-if="$ctrl.type ==='logout'" class="right item">
+        <div class="ui action input">
+            <div class="ui button" ng-click="$ctrl.logout()">Admin Logout</div>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-UserDetails.$inject = ['$state']
+UserDetails.$inject = ['$state'];
 
 function UserDetails($state) {
     if ($state.params.user) {
@@ -33,9 +33,20 @@ angular.module('latitude')
                 },
                 views: {
                     'content@': {
-                        template: '<registration-complete-component  user="userCtrl.user"></registration-complete-component>',
+                        template: '<registration-complete-component  user="userCtrl.user">'+
+                        '</registration-complete-component>',
                         controller: UserDetails,
                         controllerAs: 'userCtrl'
+                    }
+                }
+
+
+            })
+            .state('login', {
+                url: '/login',
+                views: {
+                    'content@': {
+                        template: '<login></login>'
                     }
                 }
 
@@ -45,27 +56,29 @@ angular.module('latitude')
             .state('chart', {
                 url: '/dashboard',
                 views: {
+                    'header': {
+                        template: '<header-component type="logout"></header-component>'
+                    },
                     'content': {
-                        template: '<chart-component stats="$resolve.data"></chart-component><registration-info-component users="$resolve.users"></registration-info-component>'
+                        template: '<chart-component stats="$resolve.data">'+
+            '</chart-component><registration-info-component users="$resolve.users"></registration-info-component>'
                     }
                 },
                 resolve: {
                     data: ['$http', function($http) {
                         return $http.get('/stats')
                             .then(function(response) {
-                                console.log(response);
                                 return response.data;
-                            })
+                            });
                     }],
                     users: ['$http', function($http) {
                         return $http.get('/register')
                             .then(function(response) {
-                                console.log(response);
                                 return response.data;
-                            })
+                            });
                     }]
                 }
-            })
+            });
 
 
         $urlRouterProvider.otherwise('/');
