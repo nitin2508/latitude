@@ -8,9 +8,12 @@
     },
     controller:ChartController
     });
-    ChartController.$inject=[];
-    function ChartController(){
-
+    ChartController.$inject=['$cookies'];
+    function ChartController($cookies){
+        // 
+        // if($cookies){
+        //     console.log($cookies.get('auth'));
+        // }
         this.$onInit = function(){
             this.myChartObject = {};
             this.myChartObject.type = 'PieChart';

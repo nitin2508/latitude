@@ -41,11 +41,17 @@ userRouter.post('/login', function(req, res, next) {
                 });
             }
             var token = verify.getToken(user);
-            res.cookie('auth', token);
+            var Userinformation = {
+                token:token,
+                username:user.username
+            };
+            console.log(Userinformation.username);
+            res.cookie('auth', Userinformation);
             res.status(200).json({
                 status: 'Login Sucessfull',
                 success: true,
-                token: token
+                token: token,
+                user:user
             });
         });
     })(req, res, next);
