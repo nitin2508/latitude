@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
     .component('registerComponent',{
     templateUrl:'views/component-template/content.html',
     // bindings:{
@@ -14,6 +14,7 @@
         vm.image='';
         vm.picFile = '';
         vm.registrationDetail={};
+        vm.registrationDetail.numberOfTickets = 1;
         // vm.goState = function(){
         //     $state.go('registrationInfo');
         // };
@@ -27,6 +28,11 @@
                 vm.image=response.data;
             });
         };
+        vm.checkRegistrationType = function(){
+            if(vm.registrationDetail.registrationType ==='self'){
+                vm.registrationDetail.numberOfTickets = 1;
+            }
+        }
         vm.submitUserDetail = function(){
             vm.registrationDetail.image={
                 filename:vm.image.filename,

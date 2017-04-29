@@ -9,7 +9,7 @@ function UserDetails($state) {
 
 }
 
-angular.module('latitude')
+angular.module('Affairal')
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('user', {

@@ -49,7 +49,7 @@
             <div class="two fields">
                 <div class="field">
                     <label>Registration Type</label>
-                    <select ng-model="$ctrl.registrationDetail.registrationType" required class="ui fluid search dropdown" name="type">
+                    <select ng-change="$ctrl.checkRegistrationType()" ng-model="$ctrl.registrationDetail.registrationType" required class="ui fluid search dropdown" name="type">
                        <option value="">Select Registration Type</option>
                       <option value="self">Self</option>
                       <option value="corporate">Corporate</option>
@@ -62,9 +62,9 @@
                 </div>
                 <div class="field">
                     <label>Number of tickets</label>
-                    <input type="number" required ng-model="$ctrl.registrationDetail.numberOfTickets" name="ticket" step=1 min=1 max=15 placeholder="Select no of ticket" value="1">
+                    <input ng-disabled="$ctrl.registrationDetail.registrationType === 'self'" type="number" required ng-model="$ctrl.registrationDetail.numberOfTickets" name="ticket" step=1 min=1 max=15 placeholder="Select no of ticket" value="1">
                     <span style="color:red" ng-if="registrationForm.ticket.$invalid && registrationForm.ticket.$touched">
-                        Number of ticket is necessary.
+                        Number of ticket is necessary and it cannot larger then 15.
                     </span>
                 </div>
             </div>

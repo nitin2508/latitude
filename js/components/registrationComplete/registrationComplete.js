@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
     .component('registrationCompleteComponent',{
     templateUrl:'views/component-template/registrationComplete.html',
     bindings:{

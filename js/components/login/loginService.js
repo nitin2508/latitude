@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
         .service('LoginService', LoginService);
 
     LoginService.$inject = ['$http', 'Upload','$cookies'];

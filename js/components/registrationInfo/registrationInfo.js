@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
         .component('registrationInfoComponent', {
             templateUrl: 'views/component-template/registrationInfo.html',
             bindings:{

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
         .component('headerComponent', {
             templateUrl: 'views/component-template/header.html',
             controller: HeaderController

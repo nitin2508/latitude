@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('latitude')
+    angular.module('Affairal')
     .component('chartComponent',{
     templateUrl:'views/component-template/chart.html',
     bindings:{
@@ -10,7 +10,7 @@
     });
     ChartController.$inject=['$cookies'];
     function ChartController($cookies){
-        // 
+        //
         // if($cookies){
         //     console.log($cookies.get('auth'));
         // }
