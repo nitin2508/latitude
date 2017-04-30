@@ -1,6 +1,7 @@
-# MEAN Stack Single Page Application Starter
+# MEAN Stack Single Page Form application
 
-This is a repo for a starter application for a Single Page MEAN Stack application. Just download and install and you have a good foundation for building any application. 
+In this application you can submit the form along with the uploaded photo.After submit the form you can see the preview and a unique id is generated.
+There is also a admin section where admin can see all the details of all user who submitted there form.
 
 ## Installation
 1. Install npm modules: `npm install`
@@ -22,10 +23,8 @@ Run `gulp dist`. Like dev, plus JS and CSS are minified and anything you need wi
 ## Technologies
 
 - MEAN Stack
-- Twitter Bootstrap
-- Jade Template Engine
+- Semantic UI
 - Gulp
 - Mongoose
 
-## Laravel and AngularJS Starter Application
-Also check out my [Zemke/starter-laravel-angular](https://github.com/Zemke/starter-laravel-angular) project featuring Laravel 5 and AngularJS with token-based authentication and many great features to get yourself kick-started.
+
